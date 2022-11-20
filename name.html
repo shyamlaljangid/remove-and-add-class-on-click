@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>name onclick</title>
+    <link rel="stylesheet" href="name.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="box">
+            <a href="" class="active">Read js</a>
+            <a href="">Node js</a>
+            <a href="">moge</a>
+            <a href="">Vue Js</a>
+        </div>
+        <div class="contant">
+            <div class="boxes">
+                <h2>Heading 1</h2>
+                <p class ="click">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, earum, quas eligendi ut velit
+                    sit dignissimos explicabo maiores eius architecto aspernatur neque atque, repellendus repellat?
+                    Mollitia amet ut temporibus necessitatibus?</p>
+            </div>
+            <div class="boxes">
+                <h2>Heading 2</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, earum, quas eligendi ut velit
+                    sit dignissimos explicabo maiores eius architecto aspernatur neque atque, repellendus repellat?
+                    Mollitia amet ut temporibus necessitatibus?</p>
+            </div>
+            <div class="boxes">
+                <h2>Heading 3</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, earum, quas eligendi ut velit
+                    sit dignissimos explicabo maiores eius architecto aspernatur neque atque, repellendus repellat?
+                    Mollitia amet ut temporibus necessitatibus?</p>
+            </div>
+            <div class="boxes">
+                <h2>Heading 4
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, earum, quas eligendi ut velit
+                    sit dignissimos explicabo maiores eius architecto aspernatur neque atque, repellendus repellat?
+                    Mollitia amet ut temporibus necessitatibus?</p>
+                </h2>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        let anchor = document.querySelectorAll("a")
+        // anchor.forEach(function(all){
+        //     all.onclick =function(e){
+        //         e.preventDefault();
+        //         let para = all.parentElement.children
+        //         if(para.classList.contains("active")){
+        //             para.classList.remove("active")
+        //         }
+        //         else{
+        //             para.classList.add("active")
+        //         }
+        //     } 
+        // })
+       
+          
+            for(let i=0; i<anchor.length; i++){
+                anchor[i].onclick =function(e){
+                    e.preventDefault();
+                    for(let j=0; j<anchor.length; j++){
+                        if( anchor[j].classList.contains("active")){
+                        anchor[j].classList.remove("active")
+                    }
+                    }
+               anchor[i].classList.add("active")
+        
+            }
+        }
+    </script>
+</body>
+
+</html>
